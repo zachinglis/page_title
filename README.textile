@@ -1,0 +1,33 @@
+h1. PageTitle
+
+Simple Rails helper for displaying the page title.
+
+
+h2. Example
+
+Set the @page_title variable in your action.
+<code>@page_title = "Dashboard"</code>
+
+Then in your layout, you can do something like so:
+<code>
+  <html>
+  <head>
+    <title><%= page_title(:prefix => 'London Made') %></title>
+  </head>
+  <body>
+    <h1><%= page_title %></h1>
+</code>
+
+It will return the following result:
+<code>
+  <html>
+  <head>
+    <title>London Made &raquo; Dashboard</title>
+  </head>
+  <body>
+    <h1>Dashboard</h1>
+</code>
+
+page_title options are <code>:prefix</code>, <code>:suffix</code>, <code>:seperator</code>
+
+Copyright (c) 2008 "Zach Inglis":http://zachinglis.com, released under the MIT license
